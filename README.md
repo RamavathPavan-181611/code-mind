@@ -25,24 +25,23 @@ Repository-aware Retrieval-Augmented Generation system for codebase understandin
 * AST-based Code Parsing
 
 ## Pipeline
+``` mermaid 
+graph TD
+     A[Repository Source Code] --> B[AST Chunking]
+     B --> C[Symbol Extraction]
+     C --> D[Call Graph Construction]
+     D --> E[Embedding Generation]
+     E --> F[Qdrant Storage]
+     F --> G[Hybrid Retrieval]
+     G --> H[Cross Encoder Reranking]
+     H --> I[LLM Answer Generation]
 
-Repository Source Code
-↓
-AST Chunking
-↓
-Symbol Extraction
-↓
-Call Graph Construction
-↓
-Embedding Generation
-↓
-Qdrant Storage
-↓
-Hybrid Retrieval
-↓
-Cross Encoder Reranking
-↓
-LLM Answer Generation
+     %% Styling to make it look clean
+     style F fill:#f9f, stroke : #333, stroke-width:2px
+
+
+```
+
 
 ## Setup
 
