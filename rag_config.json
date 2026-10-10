@@ -1,4 +1,7 @@
 //code-mind/rag_config.json
+
+//defines a Hybrid RAG and intent-Routing Strategy 
+//for analyzing flask and werkzeug 
 {
    "repos": [
       "flask_repo",
